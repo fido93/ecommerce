@@ -9,7 +9,6 @@ import io.restassured.http.ContentType;
 import org.junit.jupiter.api.Test;
 import org.springframework.test.context.jdbc.Sql;
 
-
 @Sql("/test-data.sql")
 class ProductControllerTest extends AbstractT {
 
@@ -42,6 +41,4 @@ class ProductControllerTest extends AbstractT {
                 .body("title", is("Product not found"))
                 .body("detail", is("Product with code " + code + " not found"));
     }
-
-
 }
